@@ -72,4 +72,7 @@ AI_Summarizer/
 
 ## 📸Snapshot
 <br>
-  <img width="203" height="433" alt="Screenshot 2025-07-24 233356" src="https://github.com/user-attachments/assets/2e28ba14-7d95-421d-b738-68ca446155d3" />     <img width="203" height="345" alt="Screenshot 2025-07-24 233329" src="https://github.com/user-attachments/assets/b5563f83-1151-4cc3-ab0a-f9671f96f319" />  <img width="917" height="465" alt="image" src="https://github.com/user-attachments/assets/8d276e8b-9dfe-4fe3-9b7d-7e42fa048f59" />
+<img width="206" height="217" alt="Screenshot 2025-07-25 004606" src="https://github.com/user-attachments/assets/2425429b-6e09-41ea-8778-1e27a2633887" />
+<img width="663" height="367" alt="image" src="https://github.com/user-attachments/assets/f12759d0-c38c-4ba1-bfdf-bd7b4610a5f0" />
+
+
