@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Summariser</title>
+  <style>
+    :root {
+      --lavender: #e6e6fa;
+      --lavender-dark: #b39ddb;
+      --lavender-mid: #d1c4e9;
+      --accent: #a084ca;
+      --accent-dark: #7c6ea3;
+      --white: #fff;
+      --shadow: 0 4px 16px rgba(160, 132, 202, 0.15);
+    }
+    body {
+      min-width: 260px;
+      padding: 18px 16px 16px 16px;
+      font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, var(--lavender), var(--lavender-mid));
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      color: var(--accent-dark);
+      transition: background 0.3s;
+    }
+    h2 {
+      margin: 0 0 12px 0;
+      font-size: 1.7em;
+      text-align: center;
+      color: var(--accent);
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px #d1c4e9;
+    }
+    .options {
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+    select, button {
+      font-size: 1em;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      box-shadow: 0 2px 8px #e6e6fa33;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    select {
+      background: var(--white);
+      color: var(--accent-dark);
+      border: 1px solid var(--lavender-dark);
+      font-weight: 500;
+      cursor: pointer;
+    }
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-dark);
+    }
+    button {
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+    button:hover, button:focus {
+      background: var(--accent-dark);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 16px #a084ca55;
+    }
+    #copy-btn {
+      background: var(--lavender-dark);
+      color: var(--accent-dark);
+      margin-top: 0;
+    }
+    #copy-btn:hover, #copy-btn:focus {
+      background: var(--accent);
+      color: var(--white);
+    }
+    #result {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #b39ddb33;
+      padding: 14px;
+      min-height: 60px;
+      max-height: 220px;
+      overflow-y: auto;
+      font-size: 1.08em;
+      color: var(--accent-dark);
+      margin-top: 10px;
+      transition: box-shadow 0.2s;
+      word-break: break-word;
+      position: relative;
+    }
+    #result:empty::before {
+      content: "Select a type and click summarize....";
+      color: #b39ddb;
+      opacity: 0.7;
+      font-style: italic;
+    }
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+    .loader {
+      border: 4px solid var(--lavender-mid);
+      border-top: 4px solid var(--accent);
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    /* Cute emoji accent */
+    .emoji {
+      font-size: 1.3em;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h2>AI Summariser</h2>
+  <div class="options">
+    <select id="summary-type">
+      <option value="brief">Short & Sweet</option>
+      <option value="detailed">Detailed</option>
+      <option value="bullets">Bullet Points</option>
+    </select>
+    <button id="summarize">Summarize</button>
+    <button id="copy-btn">Copy</button>
+  </div>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
