@@ -20,8 +20,8 @@
 
 1. *Clone the repository:*
    bash
-   git clone https://github.com/janvi-t11/AI_Summarizer.git
-   cd AI_Summarizer
+   git clone [https://github.com/gayatri-d11/AI_Summarizer-ChromeExtention.git]
+   cd AI_Summarizer-ChromeExtention
    
 2. *Install the extension locally:*
 
